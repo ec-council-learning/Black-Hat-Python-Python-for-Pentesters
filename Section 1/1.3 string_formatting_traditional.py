@@ -1,0 +1,1 @@
+print("This is a traditional Python %s that has %d conversions." % ("string", 2))

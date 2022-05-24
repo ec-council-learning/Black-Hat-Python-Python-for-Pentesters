@@ -1,0 +1,16 @@
+print("{}, {}, {}".format("a", "b", "c"))  #By default position; most common
+
+print("{2}, {1}, {0}".format("a", "b", "c"))  #By numbered position
+
+print("Coordinates: {latitude}, {longitude}".format(latitude="37.24N", longitude="-115.81W"))  #By name; automatically handles format
+
+print("Coordinates: {latitude}, {longitude}".format(latitude="37.24", longitude="-115.81"))  #Automatically handles number types
+
+name = "Camelot"
+print(f"Look, it's {name}!")  #f-string
+
+# f-string calling function
+def to_lowercase(value):
+    return value.lower()
+
+print(f"That model looks like {to_lowercase(name)}.")

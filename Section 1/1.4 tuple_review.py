@@ -1,0 +1,20 @@
+tup = (123, 543, "Billy")  #Parentheses are not required but recommended
+print(tup)
+print(tup[0])
+print(tup[-1])
+
+tup.append("Mother")  #Cannot be modified
+print(tup)
+
+tup[2] = "Mother"
+print(tup)
+
+x, y, z = tup
+print(x, y, z)
+
+# In-place swapping
+mammal = "gorilla"
+fish = "mackerel"
+mammal, fish = fish, mammal
+print(mammal)
+print(fish)

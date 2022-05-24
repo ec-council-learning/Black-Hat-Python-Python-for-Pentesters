@@ -1,0 +1,14 @@
+squares = [1, 4, 9, 16, 25]
+print(squares)
+
+print(squares[0])  #Get first value; remember index offset
+
+print(squares[-1])  #Get last value in sequence
+
+print(squares[2:4])  #Return slice of list
+
+squares.append(54)  #Add new value
+print(squares)
+
+squares[3] = 88  #Insert new value
+print(squares)

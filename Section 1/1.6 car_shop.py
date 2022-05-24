@@ -1,0 +1,45 @@
+class CarShop:
+    """Models a car salesroom.
+    Creates and shows the car inventory, calculates profit, and removes cars from inventory when sold.
+    """
+
+    def __init__(self, name):
+        self.name = name
+        self.inventory = {}
+        self.shop_markup = 1.5
+        self.sale_profit = 0
+        self.sel_car_price = None
+        self.store_profit = 0
+        self.sell_price = 0
+
+
+    def initial_inventory(self, car, quantity):
+        """Creates initial inventory of shop inventory"""
+        self.inventory[car] = quantity
+        self.sell_price = car.shop_price * self.shop_markup
+
+
+    def show_inventory(self):
+        """Displays cars currently available"""
+        avail_inventory = []
+        for car in self.inventory:
+            if self.inventory[car] > 0:
+                avail_inventory.append(car)
+        return avail_inventory
+
+
+    def indiv_sale_profit(self, car_cost):
+        """Calculate how much profit the store made on a sale"""
+        self.sel_car_price = car_cost
+        self.sale_profit += (self.sel_car_price * self.shop_markup)  - self.sel_car_price
+
+
+    def total_profit(self):
+        """Calculate the cumulative profit from all sales"""
+        self.store_profit += self.sale_profit
+        return self.store_profit
+
+
+    def sell_car(self, car_name):
+        """Remove a sold car from inventory"""
+        self.inventory[car_name] -= 1

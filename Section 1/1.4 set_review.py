@@ -1,0 +1,17 @@
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(basket)  #Duplicate values are removed
+
+print("orange" in basket)  #Membership testing
+
+a = set('abracadabra')  #Function call to create a set
+b = set('alacazam')
+
+print(a)  #Show unique values
+
+print(a - b)  # Show letters in a that aren't in b
+
+print(a | b)  #Show letters in a or b or both
+
+print(a & b)  #Show letters in both a and b
+
+print(a ^ b)  #Show letters in either a or b but not both

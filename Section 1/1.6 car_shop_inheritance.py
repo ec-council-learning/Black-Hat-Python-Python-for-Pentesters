@@ -1,0 +1,12 @@
+class ChevyShop(CarShop):
+    pass
+
+class FordShop(CarShop):
+    def total_profit(self):
+        """Calculate the cumulative profit from all sales"""
+        self.store_profit += self.sale_profit - tax
+        return self.store_profit
+
+    def clear_inventory(self):
+        """Remove all cars from inventory"""
+        self.inventory.clear()
