@@ -1,0 +1,2 @@
+# Black-Hat-Python-Python-for-Pentesters
+Black Hat Python: Python for Pentesters, by EC-Council
